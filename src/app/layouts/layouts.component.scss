@@ -1,0 +1,255 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.toolbarshadow {
+    z-index: 2;
+}
+
+.mat-list-item {
+    color: black;
+    opacity: 0.8;
+}
+
+.mat-drawer {
+    background: linear-gradient(180deg,#ffffff 0,#ffffffd7 100%);
+}
+
+.mat-toolbar {
+    opacity: 0.99;
+    background: #0f0f0f;
+    color: white;
+    font-size: 18px;
+}
+
+.main-toolbar {
+    z-index: 2;
+    max-height: 50px;
+    button{
+        bottom: 3px;
+    }
+}
+
+.main-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+// .active-list-item {
+//     color: #1e88e5 !important;
+// }
+
+mat-nav-list {    
+    padding: 2px 0 !important;
+    .active {
+        // background: linear-gradient(160deg,#1e88e5 0,#045aa1 100%);
+        border-right: 4px solid #030303 !important;
+        .mat-icon{
+            color: #000000 !important;
+        }
+        #aling_item{
+            color: #000000 !important;
+        }
+
+        .material-icons{
+            color: #000000;
+        }
+        
+        #whatsapp_icon{
+            fill: #000000;
+        }
+
+        #aling_item_whatsapp{
+            color: #000000;
+        }
+    }
+    //
+    .bottomStick {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+mat-toolbar {
+    .mat-icon {
+        color: #fff;
+    }
+}
+
+
+#version-style {
+    font-size: 10px;
+    color: #fff;
+    position: relative;
+    top: 1px;
+}
+
+#header-content {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+
+
+mat-sidenav {
+
+    .mat-list-base {
+        padding-top: 0 !important;
+        padding-bottom: 94px;
+        position: relative;
+        min-height: calc(100vh - 139px);
+    }
+
+    .navLink {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+
+::ng-deep {
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #717171;
+        border-radius: 5px;
+    }
+
+    .mat-drawer-inner-container::-webkit-scrollbar-thumb {
+        background-color: #c4c4c4;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #1e88e5;
+    }
+
+    .mat-flat-button.mat-primary,
+    .mat-raised-button.mat-primary,
+    .mat-fab.mat-primary,
+    .mat-mini-fab.mat-primary {
+        background-color: #1e88e5;
+    }
+
+    .navListClose {
+        width: 60px;
+    }
+
+    .navListOpen {
+        width: 200px;
+    }
+
+    .mat-list-base .mat-list-item.mat-list-item-with-avatar {
+        font-size: 15px;
+        height: auto !important;
+        color: #000;
+
+        .mat-list-icon {
+            width: 18px;
+            height: 18px;
+            font-size: 18px;
+        }
+
+        .mat-list-item-content {
+            padding: 10px 15px;
+
+            .mat-list-text {
+                padding-left: 10px !important;
+            }
+        }
+    }
+
+    .cursor-pointer {
+        cursor: pointer;
+    }
+}
+
+#aling_item{
+    position: relative;
+    left: 15px;
+    bottom: 5px;
+}
+
+.mat-elevation{
+    box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 10%), 0px 8px 10px 1px rgb(0 0 0 / 10%), 0px 3px 14px 2px rgb(0 0 0 / 10%);
+}
+
+.menu_img{
+    img{
+        height: 24px;
+        width: 24px;
+    }
+}
+
+// notification panel //
+.notification-panel {
+    position: absolute;
+    top: 45px;
+    right: 75px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    min-width: 30%;
+    border-radius: 8px;
+}
+
+.seperator{
+    bottom: 0px;
+    position: relative;
+    height: 1px;
+    margin: 33px;
+    background-color: #ccc;
+    span{
+        position: absolute;
+        color: gray;
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 12px;
+        padding-right: 12px;
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+// ------------------ // 
+#sf-title{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.material-icons{
+    color: #273746;
+}
+
+#whatsapp_icon{
+    fill: #273746;
+    // top: 10px;
+    position: relative;
+}
+
+#campaign{
+    font-size: 28px;
+}
+
+#aling_item{
+    letter-spacing:-0.025rem;
+}
+
+#aling_item_whatsapp{
+    position: relative;
+    left: 15px;
+    bottom: 6px;
+}
+
+.main-sidenav-content{
+    height: 100vh;
+}

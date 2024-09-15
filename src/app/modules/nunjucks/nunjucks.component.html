@@ -1,0 +1,106 @@
+<mat-drawer-container class="filter-container" [hasBackdrop]="false">
+    <mat-drawer #drawer class="sidenav-25" mode="over" position="end">
+        <div fxLayout="column" class="main" fxLayout.xs="column" fxLayoutGap="2px">
+            <div class="side_header">
+                <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-between">
+                    <div class="side_heading">
+                        <h2>Raw JSON</h2>
+                    </div>
+                    <div class="side_menu_btn">
+                        <button mat-icon-button (click)="drawer.toggle()">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="side_main">
+                <div fxLayout="column" fxLayout.xs="column">
+                    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                        <div fxFlex="100%">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <textarea matInput placeholder="Ex. Enter Json Data..." style="height: 420px;"
+                                    [(ngModel)]="jsonValue"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="dark" style="width: 100%;" (click)="jsonExtract()">USE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div fxLayout="column" class="main" fxLayout.xs="column" fxLayoutGap="10px">
+            <div fxLayout="row" fxLayoutAlign="space-between">
+                <div class="analytics-title">
+                    <span>Nunjuks Vaidator</span>
+                </div>
+                <div fxLayoutGap="10px">
+                    <button mat-raised-button color="dark"
+                        (click)="validateNunjucks()"><mat-icon>play_arrow</mat-icon>RUN</button>
+                    <button mat-raised-button color="dark"
+                        (click)="drawer.open()"><mat-icon>data_object</mat-icon>JSON</button>
+                </div>
+            </div>
+            <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="10px">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+                    <div fxFlex="50%">
+                        <mat-card>
+                            <div style="padding: 20px;">
+                                <div fxLayout="row" fxLayoutAlign="space-between">
+                                    <span class="title">Value Pair</span>
+                                    <button mat-raised-button color="dark" style="width: 13%;" (click)="addNewKeyValue()">Add</button>
+                                </div>
+                            </div>
+                            <mat-card-content>
+                                <div class="scroll" style="margin-top: 10px;">
+                                    <div *ngFor="let json of jsonArr;let i = index">
+                                        <div fxLayout="row" fxLayoutGap="10px">
+                                            <mat-form-field appearance="outline" style="width: 100%;">
+                                                <input matInput placeholder="key" autocomplete="off" [(ngModel)]="json.key">
+                                            </mat-form-field>
+                                            <mat-form-field appearance="outline" style="width: 100%;">
+                                                <input matInput placeholder="value" autocomplete="off" [(ngModel)]="json.value">
+                                            </mat-form-field>
+                                            <!-- <button mat-raised-button color="warn">Delete</button> -->
+                                            <button mat-mini-fab color="dark" style="top: 8px;" (click)="deleteJsonEntry(i)">
+                                                <mat-icon>delete</mat-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div fxFlex="50%">
+                        <div fxLayout="column" fxLayoutGap="10px">
+                            <mat-card>
+                                <mat-card-header>
+                                    <mat-card-title>Nunjucks Code</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <mat-form-field appearance="outline" style="width: 100%;">
+                                        <textarea matInput placeholder="Ex. Nunjucks Code..." style="height: 290px;"
+                                            [(ngModel)]="nunjucksCode"></textarea>
+                                    </mat-form-field>
+                                </mat-card-content>
+                            </mat-card>
+                            <mat-card>
+                                <mat-card-header>
+                                    <mat-card-title>Result</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <mat-form-field appearance="outline" style="width: 100%;">
+                                        <textarea matInput placeholder="Nunjucks Output" style="height: 200px;"
+                                            [(ngModel)]="result" readonly></textarea>
+                                    </mat-form-field>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

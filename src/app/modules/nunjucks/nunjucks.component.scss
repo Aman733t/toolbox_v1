@@ -1,0 +1,79 @@
+.main {
+    padding-left: 20px;
+    padding-bottom: 80px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.filter-container {
+    min-height: calc(100vh - 50px);
+    background-color: #F1F4FA;
+}
+
+.sidenav-25 {
+    width: 50%;
+    position: fixed;
+    top: 45px;
+}
+
+div.scroll {
+    max-height: 635px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+.scroll {
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+mat-card {
+    // border-radius: 10px;
+    border-radius: 0.6rem;
+}
+
+mat-card-title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.mat-dark {
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+.menu-button {
+    z-index: 99999;
+    border-radius: 100% !important;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+mat-drawer-content{
+    .mat-dark {
+        background-color: #0d0d0d;
+        color: #fff;
+    }
+}
+
+.analytics-title{
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.side_main{
+    .mat-dark {
+        background-color: #0d0d0d;
+        color: #fff;
+    }   
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
